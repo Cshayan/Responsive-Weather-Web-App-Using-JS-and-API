@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find your weather</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="style.css">
+<style>
+    #convert{
+    display: inline-block; 
+    background-color: transparent;
+    border:none; 
+    outline: none; 
+    padding: 4px 7px 4px 7px; 
+    border-radius: 10px;
+    border: 1px solid #fff;
+    margin-left: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3)
+    }
+    #convert:hover{
+        background-color: transparent;
+        -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+    }
+    
+</style>
+</head>
+<body>
+    <form class="container" action="#" >
+            <div id="info" class="col-lg-2">
+            <ul>
+                    <li>Make sure you are connected to the internet while searching the weather for any place.</li>
+                    <li>Please type the city name correctly to get the result.</li>
+                </ul>
+            </div>
+    <div class="col-lg-8">
+       <div class="input-group">
+           <input type="text" class="form-control" id="searchInput" placeholder="Enter city name here">
+           <div class="input-group-btn">
+               <input type="submit" id="searchBtn"  class="btn" value="Get weather">
+           </div>
+        </div>
+        <br><br><br>
+        <div id="error" class="alert alert-danger" style="visibility: hidden">
+                The city entered is not found !! Please make sure to type the correct city name.
+        </div>
+        <div id="weatherContainer">
+            <div id="weatherDescription">
+                <h1 id="city"></h1>
+                <div id="latitude"></div>
+                <div id="longitude"></div>
+                <div id="weatherDetails">
+                    <h2 id="temperature"></h2>
+                    <form action="">
+                    <input type="submit" id="convert" value="Click to change the unit"">
+                     </form>
+                    <div id="weatherDescriptionHeader"></div>
+                    <div><img id="weatherIconImg"></div>
+                </div>
+              <hr>
+                <div id="windSpeed" class="bottomDetails"></div>
+                <div id="humidity" class="bottomDetails"></div>
+            </div>
+        </div>
+    <div  class="col-lg-2"></div>
+       </div>
+    </form>
+<script src="script.js"></script>
+    
+</body>
+</html>
